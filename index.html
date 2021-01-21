@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>KikiLab/></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <section class="section section-hero">
+    <div class="hero">
+      <div class="header">
+        <div class="header__col">
+          <h1 class="header__firstname header__title">M</h1>
+        </div>
+        <div class="header__col">
+          <h1 class="header__lastname header__title">K</h1>
+        </div>
+      </div>
+
+      <a href="code-profile.html" class="hero__code">
+        <div class="typed-wrap">
+          <span id="typed"></span>
+        </div>
+      </a>
+      <a href="model-profile.html" class="hero__model">
+        <div class="hero__bg"></div>
+        <div></div>
+        <div></div>
+      </a>
+    </div>
+  </section>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/typed.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    Typed.new('.typed-wrap span', {
+      strings: ["Mariam Kikilashvili", "22 / 09 / 1999", "UI / Developer"],
+      typeSpeed: 80
+    });
+  });
+</script>
+
+</html>
