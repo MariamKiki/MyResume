@@ -15,7 +15,7 @@ body * {
 /* Document
    ========================================================================== */
 /**
- * 1. Correct the line height in all browsers.
+ * 1. Correct the line height in all browsers.__
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
@@ -394,7 +394,7 @@ template {
     left: 0;
     top: 0;
     background-size: cover;
-    background-image: url("../../../assets/images/mood.jpg");
+    background-image: url("../../assets/images/mood.jpg");
     background-repeat: no-repeat;
     background-position: center center; }
 
