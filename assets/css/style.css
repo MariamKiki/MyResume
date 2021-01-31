@@ -15,7 +15,7 @@ body * {
 /* Document
    ========================================================================== */
 /**
- * 1. Correct the line height in all browsers.__
+ * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
@@ -327,6 +327,7 @@ template {
 .hero {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -397,6 +398,80 @@ template {
     background-image: url("../../assets/images/mood.jpg");
     background-repeat: no-repeat;
     background-position: center center; }
+
+.head-wrap {
+  position: absolute;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  padding: 0 60px; }
+
+.logo {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  border: 1px solid;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: all 0.5s; }
+  .logo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff26;
+    filter: blur(30px);
+    transition: all 0.5s; }
+  .logo .icon {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    color: #ffffffab;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Major Mono Display', monospace;
+    transition: all 0.5s; }
+    .logo .icon span {
+      font-family: 'Major Mono Display', monospace;
+      position: absolute;
+      transition: 0.5s; }
+    .logo .icon .f {
+      z-index: 1;
+      right: 0px;
+      bottom: -20px;
+      color: #e3244cba; }
+    .logo .icon .l {
+      color: #24ce38d4;
+      left: 0px;
+      bottom: -20px; }
+  .logo:hover {
+    border: 1px solid #e3244c6e; }
+    .logo:hover .f {
+      color: #24ce38d4;
+      font-size: 20px;
+      font-weight: bold;
+      bottom: 15px;
+      right: -5px; }
+    .logo:hover .l {
+      left: -25px !important;
+      font-size: 60px;
+      color: #e3244cba;
+      bottom: -40px; }
 
 .container {
   width: 100%;
@@ -1317,15 +1392,22 @@ button.swiper-pagination-bullet {
   -ms-transform-origin: left top;
       transform-origin: left top; }
 
-.top-social {
+.top-area {
   position: absolute;
-  right: 50px;
-  top: 50px;
   display: -ms-flexbox;
   display: flex;
-  z-index: 2; }
+  z-index: 2;
+  left: 0;
+  top: 0;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 100%; }
 
 .icons {
+  margin-left: auto;
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
@@ -1486,7 +1568,9 @@ button.swiper-pagination-bullet {
     left: 0;
     padding: 15px; }
   .scroll-message {
-    right: 5px; } }
+    right: 5px; }
+  .head .container {
+    padding-top: 20px; } }
 
 .header {
   display: -ms-flexbox;
@@ -1508,9 +1592,10 @@ button.swiper-pagination-bullet {
         padding: 0; } }
   .header__title {
     margin: 0;
-    color: #ffffff; }
+    color: #e3244cba; }
   .header__firstname {
     font-size: 54px;
+    color: #24ce38d4;
     margin-right: 5px;
     margin-left: auto;
     font-family: 'Major Mono Display', monospace;

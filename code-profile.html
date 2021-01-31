@@ -19,13 +19,24 @@
 <body>
   <!------------------------Hero------------------------>
   <section class="head">
+    <div class="head-wrap">
+      <div class="container">
+        <a href="index.html" class='logo'>
+          <div class='icon'>
+            <span class="f">M</span>
+            <span class="l">K</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <div class="canvas">
-          <canvas id="canvas"></canvas>
+      <canvas id="canvas"></canvas>
     </div>
     <div class="container">
       <div class="timeline"></div>
       <header class="head-about">
-          <h1>[UI/] Developer</h1>
+        <h1>[UI/] Developer</h1>
       </header>
     </div>
   </section>
@@ -207,31 +218,40 @@
 
     canvas.height = H;
     canvas.width = W;
-var char = "诶, 比, 西, 迪, 伊, 吉, 艾, 杰, 开, 哦, 屁, 提, 维 ,1,2,3,4,5,6,7,8,9,0";
+    var char = "诶, 比, 西, 迪, 伊, 吉, 艾, 杰, 开, 哦, 屁, 提, 维 ,1,2,3,4,5,6,7,8,9,0";
 
     char = char.split("");
 
     var fontSize = 12;
-    var columns = W/fontSize;
+    var columns = W / fontSize;
     var decY = [];
     var active = 1;
 
-    for(var n = 0; n < columns; n++) decY[n]=Math.round(Math.random() * (H/10)); ctx.fillStyle="black" ; ctx.fillRect(0,
-      0, W, H); function draw() { ctx.fillStyle="rgba(0, 0, 0, 0.05)" ; ctx.fillRect(0, 0, W, H); ctx.fillStyle="#c91f20" ;
-      ctx.font=fontSize + "px Matrix" ; for(var i=0; i < decY.length; i++) { var
-      text=char[Math.floor(Math.random()*char.length)]; ctx.fillText(text, i*fontSize, decY[i]*fontSize);
-      if(decY[i]*fontSize> H && Math.random() > 0.98){
-      decY[i] = 0;
+    for (var n = 0; n < columns; n++) decY[n] = Math.round(Math.random() * (H / 10));
+    ctx.fillStyle = "black";
+    ctx.fillRect(0,
+      0, W, H);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#c91f20";
+      ctx.font = fontSize + "px Matrix";
+      for (var i = 0; i < decY.length; i++) {
+        var
+          text = char[Math.floor(Math.random() * char.length)];
+        ctx.fillText(text, i * fontSize, decY[i] * fontSize);
+        if (decY[i] * fontSize > H && Math.random() > 0.98) {
+          decY[i] = 0;
+        }
+
+        decY[i]++;
       }
-
-      decY[i]++;
-      }
-      }
+    }
 
 
-      setInterval(draw,42);
-      setInterval(cursor, 500);
-
+    setInterval(draw, 42);
+    setInterval(cursor, 500);
   </script>
 </body>
 
