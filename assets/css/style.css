@@ -371,6 +371,8 @@ template {
     height: 100%;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #030000;
     position: relative; }
     @media only screen and (max-width: 768px) {
@@ -1629,3 +1631,32 @@ button.swiper-pagination-bullet {
     text-shadow: 150px 0px 25px #e3244c; }
   100% {
     text-shadow: 200px 0px 300px #e3244c; } }
+    
+.click__coder {
+  color: #e3244cba;
+  z-index: 1;
+  right: 20px;
+  position: absolute;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.click__model {
+  color:#24ce38d4;
+  z-index: 1;
+  left: 20px;
+  position: absolute;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.hero__code:hover .click__coder,
+.hero__model:hover .click__model {
+  scale: 1.2;
+}
+  @media only screen and (max-width: 768px) {
+    .click__coder{
+      right: inherit;
+    bottom: 0; } 
+    .click__model{
+      left: inherit;
+    top: 0; } 
+  }
